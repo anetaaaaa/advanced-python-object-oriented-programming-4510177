@@ -18,3 +18,4 @@ print(n)
 
 # %% Method
 proxy.close()
+# %%

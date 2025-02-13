@@ -27,3 +27,4 @@ tracemalloc.start()
 cars = [Car(i, rand_lat(), rand_lng()) for i in range(size)]
 current, peak = tracemalloc.get_traced_memory()
 print('current:', mb(current), 'peak:', mb(peak))
+# %%

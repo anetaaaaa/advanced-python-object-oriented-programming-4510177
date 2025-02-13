@@ -27,3 +27,4 @@ print(li.value)
 
 # %% Invalid SKU
 li.sku = ' '
+# %%

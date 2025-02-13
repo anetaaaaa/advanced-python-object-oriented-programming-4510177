@@ -11,6 +11,7 @@ class Worker:
     def uptime(self):
         return time() - self.__started
 
+## double underscore attributes from classes are for subclasses to use as their own - not a private attribute
 
 # %% SpotWorker
 class SpotWorker(Worker):
@@ -29,3 +30,5 @@ print(f'uptime: {worker.uptime():.2f}')
 
 # %%
 print(worker.__dict__)
+
+# %%

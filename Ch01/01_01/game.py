@@ -12,3 +12,4 @@ class Player:
 # %% Test
 p1 = Player('Parzival')
 print('Player:', Player.num_players)
+# %%

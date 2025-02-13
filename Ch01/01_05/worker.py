@@ -26,3 +26,5 @@ class SpotWorker(Worker):
 worker = SpotWorker('769f984')
 sleep(0.123)
 print(f'uptime: {worker.uptime():.2f}')
+
+# %%
