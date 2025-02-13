@@ -17,5 +17,7 @@ class Colors:
 # %% Test
 colors = Colors()
 
-val = colors.green
+val = colors.yellow
 print(f'green: {val:06X}')  # 00FF00
+
+# %%
