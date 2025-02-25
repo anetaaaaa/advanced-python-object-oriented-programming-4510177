@@ -30,3 +30,5 @@ obj = {
     'lng': -0.1270605,
 }
 store_json(out, obj)
+
+# %%

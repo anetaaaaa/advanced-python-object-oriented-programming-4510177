@@ -26,7 +26,7 @@ class SecurityPlugin(Plugin):
         if event.action == 'login' and event.user == 'elliot':
             print(f'WARNING: {event.user} has logged in')
 
-    def shutdwon(self):
+    def shutdown(self):
         print('security shutting down')
 
 
@@ -51,3 +51,5 @@ plugins = [LoggingPlugin(), SecurityPlugin()]
 event = Event('elliot', 'login')
 notify(plugins, event)
 shutdown(plugins)
+
+# %%

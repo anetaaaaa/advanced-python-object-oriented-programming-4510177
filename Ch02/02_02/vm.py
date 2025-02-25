@@ -19,3 +19,5 @@ class VM:
 # %% Test
 vm = VM()
 print(vm.name)
+
+# %%

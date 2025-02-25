@@ -38,3 +38,5 @@ user.log_id()
 
 vm = LoggedVM('m1', '4922a77')
 vm.log_id()
+
+# %%

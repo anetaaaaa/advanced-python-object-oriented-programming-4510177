@@ -37,3 +37,5 @@ print(u.login, type(u))
 
 a = Admin.from_token('18317ac')
 print(a.login, type(a))
+
+# %%

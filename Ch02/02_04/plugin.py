@@ -38,3 +38,5 @@ plugins = [LoggingPlugin(), SecurityPlugin()]
 event = Event('elliot', 'login')
 notify(plugins, event)
 shutdown(plugins)
+
+# %%

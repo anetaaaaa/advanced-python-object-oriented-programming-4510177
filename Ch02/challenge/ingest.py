@@ -6,7 +6,6 @@ class LoginEvent:
     def notify_loaded(self):
         print('LoginEvent loaded')
 
-
 class AccessEvent:
     def __init__(self, login, uri):
         self.login = login
@@ -15,11 +14,30 @@ class AccessEvent:
     def notify_loaded(self):
         print(f'AccessEvent loaded (uri={self.uri!r})')
 
+# %% Solution
+from abc import ABC, abstractmethod 
+import json
+
+class Serialized(ABC):
+    @classmethod
+    def from_json(cls, data):
+        params = json.loads(data)
+        inst = cls(**params)
+        inst.notify_loaded()
+        return inst   
+    
+    @abstractmethod
+    def notify_loaded(self):
+        pass
 
 # Add an ability to load events from JSON data (str)
 # Use a Mixin class
 # Make sure that Events have notify_loaded method (ABC)
 
+class SerializedLogin(LoginEvent, Serialized):
+    pass
+class SerializedAccess(AccessEvent, Serialized):
+    pass
 
 # %% Test
 # LoginEvent
@@ -31,3 +49,6 @@ access_data = '''
   "uri": "file:///etc/passwd"
 }
 '''
+event = SerializedLogin.from_json(login_data)
+event = SerializedAccess.from_json(access_data)
+# %%
