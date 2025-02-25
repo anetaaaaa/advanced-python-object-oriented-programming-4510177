@@ -49,3 +49,5 @@ class Robot(Checker):
 walle = Robot()
 walle.move(100, 200)
 Robot.manufacture = 'Boston Dynamics'
+
+# %%

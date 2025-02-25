@@ -35,3 +35,5 @@ Robot = type(
 )
 walle = Robot()
 walle.move(100, 200)
+
+# %%
