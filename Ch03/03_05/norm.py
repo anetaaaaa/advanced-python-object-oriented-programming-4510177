@@ -22,3 +22,5 @@ def make_norm(factor):
 
 n93 = make_norm(.93)
 print(n93(100))
+
+# %%

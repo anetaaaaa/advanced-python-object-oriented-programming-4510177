@@ -75,8 +75,32 @@ print('len:', row[0])
 class DB(MutableMapping):
     """sqlite3 backed mapping"""
     def __init__(self, db_file):
-        # TODO
-        ...
+        self.conn = sqlite3.connect(db_file)
+        self.conn.executescript(schema_sql)
+
+    def __getitem__(self, key):
+        cur = self.conn.execute(get_sql, {'key': key} )
+        row = cur.fetchone()
+        if row is None:
+            raise KeyError(key)
+        return row[0]
+    
+    def __setitem__(self, key, value):
+        with self.conn:
+            self.conn.execute(set_sql, {'key': key, 'value': value})
+    
+    def __delitem__(self, key):
+        with self.conn:
+            conn.execute(del_sql, {'key': key})
+    
+    def __iter__(self):
+        for row in self.conn.execute(keys_sql):
+            yield row[0]
+    
+    def __len__(self):
+        cur = self.conn.execute(len_sql)
+        row = cur.fetchone()
+        return row[0]
 
 # %% Test
 db = DB('/tmp/animals.db')
@@ -90,3 +114,5 @@ for key in db:
 print('<db> len:', len(db))
 del db['fish']
 print('<db> len (delete):', len(db))
+
+# %%

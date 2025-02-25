@@ -28,3 +28,5 @@ class Duration:
 u1 = Duration(317, 'us')
 u2 = Duration(2.7, 'ms')
 print(u1 + u2)
+
+# %%

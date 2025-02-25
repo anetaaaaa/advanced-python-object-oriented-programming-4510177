@@ -39,3 +39,5 @@ print(f'{p=}')
 
 # %% format
 print(f'A payment of {p:%a} in {p:%c}')
+
+# %%

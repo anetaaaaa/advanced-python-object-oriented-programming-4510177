@@ -1,6 +1,7 @@
 # %% Headers
 from collections.abc import Mapping
 
+#headers are case insensitive unlike dict
 class Headers(Mapping):
     def __init__(self, headers: dict):
         self._headers = {
@@ -31,3 +32,5 @@ for key in headers:
     print('key:', key)
 for key, value in headers.items():
     print(key, '->', value)
+
+# %%

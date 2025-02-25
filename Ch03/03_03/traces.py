@@ -26,3 +26,5 @@ trace_ids = defaultdict(count(1).__next__)
 print('calls ID:', trace_ids['http.calls'])
 print('calls ID:', trace_ids['http.calls'])
 print('errors ID:', trace_ids['http.errors'])
+
+# %%
