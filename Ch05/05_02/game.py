@@ -1,6 +1,7 @@
 # %% Room
 from collections import namedtuple
 
+# creating a class from namedtuple with name of the class and list of attributes - list of strings or string with spaces
 Room = namedtuple('Room', 'x y')
 
 r1 = Room(1, 2)
@@ -30,3 +31,5 @@ Range = namedtuple('Range', 'low high')
 
 rng = Range(1, 2)
 print(rng == r1)
+
+# %%

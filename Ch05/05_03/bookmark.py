@@ -1,4 +1,5 @@
 # %% Bookmark
+#decorators
 from dataclasses import dataclass, field
 from datetime import datetime, UTC
 
@@ -9,6 +10,7 @@ class Bookmark:
     tags: list[str] = field(default_factory=list) 
     created: datetime = None
 
+    #required instead of init when customization is required after creating an instance
     def __post_init__(self):
         if self.created is None:
             self.created = datetime.now(tz=UTC)

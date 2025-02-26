@@ -1,7 +1,8 @@
 # %% Event
+#freezing dataclasses
 from dataclasses import dataclass
 
-@dataclass
+@dataclass(frozen=True)
 class Event:
     uri: str
     action: str
@@ -21,3 +22,4 @@ counts = Counter()
 for evt in events:
     counts[evt] += 1
 print(counts)
+# %%

@@ -1,7 +1,7 @@
 # %% serializer
 serializers = {}  # media_type -> class
 
-
+#decorators with lower letter
 class serializer:
     def __init__(self, media_type):
         self.media_type = media_type
@@ -57,3 +57,5 @@ events = [
     },
 ]
 serialize(sys.stdout, 'application/json', events)
+
+# %%
